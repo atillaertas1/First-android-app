@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+
     }
 
     public void clearButton(View view){
@@ -102,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void nameActivityButton(View view){
         Intent intent = new Intent(MainActivity.this,NameActivity.class);
+        storedAge = sharedPreferences.getInt("storedAge",0);
+        intent.putExtra("storedAge", storedAge);
         startActivity(intent);
     }
 

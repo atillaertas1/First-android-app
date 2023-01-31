@@ -32,6 +32,8 @@ public class NameActivity extends AppCompatActivity {
 
     String storedSurName;
 
+    Integer age;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,14 +46,16 @@ public class NameActivity extends AppCompatActivity {
 
         sharedPreferences = this.getSharedPreferences("com.atillaertas.datasave", Context.MODE_PRIVATE);
 
+        age = getIntent().getIntExtra("storedAge",0);
+
         storedName = sharedPreferences.getString("name","");
         storedSurName = sharedPreferences.getString("surname", "");
 
-        if (storedName == null && storedSurName == null){
+        if (storedName == "" && storedSurName == ""){
             textView.setText("Name: \nSurname: ");
         }
         else{
-            textView.setText("Name: " + storedName + "\n" + "Surname: " + storedSurName);
+            textView.setText("Name: " + storedName + "\n" + "Surname: " + storedSurName + "\n" +"Age: " + age);
         }
         editor = sharedPreferences.edit();
     }
@@ -74,7 +78,7 @@ public class NameActivity extends AppCompatActivity {
                     String name = nameText.getText().toString();
                     String surName = surnameText.getText().toString();
 
-                    textView.setText("Name: " + name + "\n" + "Surname:" + surName);
+                    textView.setText("Name: " + name + "\n" + "Surname: " + surName + "\n" +"Age: " + age);
 
                     editor.putString("name",name);
                     editor.putString("surname",surName);
