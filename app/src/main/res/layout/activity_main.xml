@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="nameActivity"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="save"
+        android:layout_marginBottom="4dp"
+        android:onClick="saveButton"
         android:text="SAVE"
         app:layout_constraintBottom_toTopOf="@+id/clearButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -33,7 +35,7 @@
         android:id="@+id/ageResult"
         android:layout_width="173dp"
         android:layout_height="92dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="52dp"
         android:text="Yasiniz:"
         android:textAlignment="center"
         android:textSize="34sp"
@@ -45,12 +47,23 @@
         android:id="@+id/clearButton"
         android:layout_width="87dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="48dp"
-        android:onClick="clear"
+        android:layout_marginBottom="4dp"
+        android:onClick="clearButton"
         android:text="CLEAR"
+        app:layout_constraintBottom_toTopOf="@+id/nameActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/nameActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:onClick="nameActivityButton"
+        android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

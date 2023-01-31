@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void save(View view){
+    public void saveButton(View view){
 
         if (!editText.getText().toString().matches("")){
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void clear(View view){
+    public void clearButton(View view){
         if (storedAge != 0) {
 
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -96,6 +97,12 @@ public class MainActivity extends AppCompatActivity {
             });
             alert.show();
         }
+    }
+
+
+    public void nameActivityButton(View view){
+        Intent intent = new Intent(MainActivity.this,NameActivity.class);
+        startActivity(intent);
     }
 
 }
