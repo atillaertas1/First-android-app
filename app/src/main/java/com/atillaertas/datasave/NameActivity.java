@@ -101,7 +101,7 @@ public class NameActivity extends AppCompatActivity {
 
 
     public void clearName(View view){
-        if (!surnameText.getText().toString().matches("")){
+
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.setTitle("Clear");
             alert.setMessage("Temizlensin mi?");
@@ -121,6 +121,11 @@ public class NameActivity extends AppCompatActivity {
                 }
             });
             alert.show();
-        }
+
+    }
+
+    public void timerActivity(View view){
+        Intent intent = new Intent(getApplicationContext(),TimerActivity.class);
+        startActivity(intent);
     }
 }

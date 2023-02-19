@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         sharedPreferences = this.getSharedPreferences("com.atillaertas.datasave",Context.MODE_PRIVATE);
 
-        storedAge = sharedPreferences.getInt("storedAge",0);
+        storedAge = sharedPreferences.getInt("storedAge",0);//Hafızaya kaydettik eğer hafızada yoksa standart değeri 0
 
         if (storedAge == 0) {
             textView.setText("Your age : ");

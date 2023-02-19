@@ -12,6 +12,12 @@
         android:theme="@style/Theme.Datasave"
         tools:targetApi="31">
         <activity
+            android:name=".CountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TimerActivity"
+            android:exported="false" />
+        <activity
             android:name=".NameActivity"
             android:exported="false" />
         <activity
